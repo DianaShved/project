@@ -1,0 +1,158 @@
+$main-width: 1540px;
+ul {
+    list-style-type: none;
+}
+
+* {
+    margin-top: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    @media (max-width: 480px) {
+        margin: 0px 0px;
+    }
+}
+
+.work-space {
+    max-width: $main-width;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+            }
+            
+    
+    .reg {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .reg-block {
+            width: 50%;
+            min-height: 721px;
+            min-width: 204px;
+            @media (max-width: 763px) {
+                max-width: $main-width;
+                width: 100%;
+            }
+        }
+        .reg-image {
+            background-image: url("../IMG/reg_img.jpg");
+            height: auto;
+            padding: 0px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            background-size: cover;
+            .reg-pluses {
+                background: rgba(12, 43, 153, 0.57);
+                max-width: 516px;
+                width: 100%;
+                min-height: 259px;
+                display: flex;
+                flex-direction: column;
+                padding: 20px 15px;
+                justify-content: space-between;
+                .plus {
+                    display: flex;
+                    gap: 18px;
+                    max-width: 470px;
+                    align-items: center;
+                    width: 100%;
+                    .plus-text {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        color: #FFFFFF;
+                        max-width: 420px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .reg-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 67px 75px;
+            background-color: #afe4f1;
+            gap: 60px;
+            @media (max-width: 500px) {
+                max-width: $main-width;
+                padding: 67px 20px;
+                width: 100%;
+            }
+            .form-caption {
+                font-family: 'Playfair Display';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 52px;
+                line-height: 50px;
+                color: #0C1C54;
+            }
+            form {
+                @media (max-width: 500px) {
+                    max-width: $main-width;
+                    width: 100%;
+                }
+                max-width: 577px;
+                width: 100%;
+                min-width: 200px;
+                background: rgba(254,
+                249,
+                249,
+                0.55);
+                border-radius: 15px;
+                display: flex;
+                padding: 62px 36px;
+                justify-content: center;
+                gap: 70px;
+                flex-wrap: wrap;
+                .wrap-input {
+                    border-bottom: 1px solid #000000;
+                    width: 191px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+                input {
+                    outline: none;
+                    background-color: rgba(254, 249, 249, 0.0);
+                    border: none;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 20px;
+                    line-height: 170%;
+                    color: #000000;
+                    width: 139px;
+                }
+                button {
+                    max-width: 242px;
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    height: 52px;
+                    background: rgba(26, 46, 116, 0.74);
+                    border-radius: 45px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 50px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+   

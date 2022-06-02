@@ -1,0 +1,355 @@
+$main-width: 1440px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footer-wrap {
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+.name-and-preamb {
+    @media (max-width: 1440px) {
+        padding: 0 20px;
+    }
+    margin: 0 auto;
+    max-width: 759px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-height: 103px;
+    .name {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 67px;
+        color: #23155F;
+    }
+    .pre {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 33px;
+        line-height: 40px;
+        color: #23155F;
+    }
+}
+
+body {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #afe4f1;
+}
+
+.content {
+    @media (max-width: 1440px) {
+        padding: 0 20px;
+    }
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    color: #180B52;
+    max-width: 1302px;
+    width: 100%;
+}
+
+.city-about {
+    text-indent: 1.9em;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 60px;
+    color: #23155F;
+}
+
+.wrapper-city-about {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.wrapper-hotels {
+    @media (max-width: 1440px) {
+        padding: 0 20px;
+        gap: 4px;
+        justify-content: center;
+    }
+    display: flex;
+    gap: 0px;
+    max-width: $main-width;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    .hotel {
+        background-size: cover;
+        width: $main-width / 4;
+        flex: 1 300px;
+        height: 356px;
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 3px;
+        .hotel-title {
+            text-indent: 5px;
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 140%;
+            color: #FFFEFE;
+        }
+        .prices {
+            display: flex;
+            margin-left: 30px;
+            flex-direction: column;
+            gap: 2px;
+            max-width: 210px;
+            width: 100%;
+            span {
+                font-family: 'Titillium Web';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 140%;
+                color: #FFFEFE;
+            }
+            .cost {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 35px;
+                line-height: 140%;
+                color: #FFFEFE;
+            }
+        }
+    }
+}
+
+.city-img {
+    width: 100%;
+    height: 547px;
+    @media (max-width: 900px) {
+        height: 350px;
+        ;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+header {
+    width: 100%;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.58);
+    .header-wrap {
+        @media (max-width: 1440px) {
+            padding: 0 20px;
+        }
+        .logo {
+            z-index: 1000;
+        }
+        .burger {
+            height: 50px;
+            display: none;
+            z-index: 100;
+            @media (max-width: 813px) {
+                display: block;
+            }
+            .line {
+                font-size: 23px;
+                font-weight: 600;
+                height: 8px;
+                z-index: 100;
+                transition: all .2s;
+            }
+            .bg-menu {
+                display: none;
+            }
+            &:hover {
+                .line:nth-child(1) {
+                    transform: rotate(45deg) translateX(18px) translateY(1px);
+                    top: 2px;
+                }
+                .line:nth-child(2) {
+                    display: none;
+                }
+                .line:nth-child(3) {
+                    transform: rotate(-45deg) translateX(-7px) translateY(2px);
+                    top: -2px;
+                }
+                .bg-menu {
+                    transition: all .3s;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    z-index: -1;
+                    width: 100%;
+                    background-color: #fdedff07;
+                    height: 50vh;
+                    backdrop-filter: blur(14px);
+                    padding: 0 0 60px 0;
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 23px;
+                        line-height: 28px;
+                        color: #23155F;
+                    }
+                }
+            }
+        }
+        max-width: 1440px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .nav-menu {
+            @media (max-width: 813px) {
+                display: none;
+            }
+            ul {
+                margin: 0;
+                padding: 0px;
+                display: flex;
+                gap: 91px;
+                a {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 23px;
+                    line-height: 28px;
+                    color: #23155F;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-image: url("../IMG/footer-back.svg");
+    max-width: $main-width;
+    background-size: cover;
+    width: 100%;
+    min-height: 721px;
+    height: auto;
+    padding-top: 23px;
+    padding-left: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .logo-in-foot {
+        width: 169.86px;
+        height: 53.83px;
+    }
+    .footer-infos {
+        display: flex;
+        max-width: 1356px;
+        width: 100%;
+        min-height: 257px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .foot-info {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            max-width: 297px;
+            width: 100%;
+            min-width: 190px;
+            align-items: flex-start;
+            height: auto;
+            gap: 19px;
+            .title {
+                font-family: 'Titillium Web';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 31.1489px;
+                line-height: 140%;
+                width: 100%;
+                color: #000000;
+                border-bottom: 1px solid #000000;
+            }
+            .info-menu {
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+                display: flex;
+                gap: 4px;
+                flex-direction: column;
+                a {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    color: #000000;
+                }
+            }
+        }
+    }
+    .contacts {
+        @media (max-width: 818px) {
+            background: linear-gradient(270deg, #4429BC 0%, rgba(87, 58, 217, 0.93) 34.38%, rgba(150, 131, 236, 0.53) 100%);
+            padding: 4px;
+            box-sizing: content-box;
+        }
+        max-width: 461px+310px;
+        min-width: 200px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 235px;
+        align-self: flex-end;
+        gap: 47px;
+        min-height: 235px;
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 39px;
+            .contact {
+                display: flex;
+                gap: 22px;
+                span {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 140%;
+                    color: #000000;
+                }
+            }
+        }
+        .images-contact {
+            display: flex;
+            width: 100%;
+            max-width: 325px;
+            justify-content: space-between;
+        }
+    }
+}

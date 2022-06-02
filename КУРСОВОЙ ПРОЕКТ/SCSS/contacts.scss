@@ -1,0 +1,132 @@
+$main-width: 1540px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footer-wrap {
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+body {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
+
+footer {
+    background-image: url("../IMG/footer-back.svg");
+    max-width: $main-width;
+    background-size: cover;
+    width: 100%;
+    min-height: 721px;
+    height: auto;
+    padding-top: 23px;
+    padding-left: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .logo-in-foot {
+        width: 169.86px;
+        height: 53.83px;
+    }
+    .footer-infos {
+        display: flex;
+        max-width: 1356px;
+        width: 100%;
+        min-height: 257px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .foot-info {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            max-width: 297px;
+            width: 100%;
+            min-width: 190px;
+            align-items: flex-start;
+            height: auto;
+            gap: 19px;
+            .title {
+                font-family: 'Titillium Web';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 31.1489px;
+                line-height: 140%;
+                width: 100%;
+                color: #000000;
+                border-bottom: 1px solid #000000;
+            }
+            .info-menu {
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+                display: flex;
+                gap: 4px;
+                flex-direction: column;
+                a {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    color: #000000;
+                }
+            }
+        }
+    }
+    .contacts {
+        @media (max-width: 818px) {
+            background: linear-gradient(270deg, #4429BC 0%, rgba(87, 58, 217, 0.93) 34.38%, rgba(150, 131, 236, 0.53) 100%);
+            padding: 4px;
+            box-sizing: content-box;
+        }
+        max-width: 461px+310px;
+        min-width: 200px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 235px;
+        align-self: flex-end;
+        gap: 47px;
+        min-height: 235px;
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 39px;
+            .contact {
+                display: flex;
+                gap: 22px;
+                span {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 140%;
+                    color: #000000;
+                }
+            }
+        }
+        .images-contact {
+            display: flex;
+            width: 100%;
+            max-width: 325px;
+            justify-content: space-between;
+        }
+    }
+}
